@@ -1,0 +1,12 @@
+{
+  "coveragePathIgnorePatterns": ["/node_modules/"],
+  "coverageProvider": "v8",
+  "testMatch": ["**/*.spec.js"],
+  "testPathIgnorePatterns": ["/node_modules/"],
+  "collectCoverageFrom": [
+    "**/*.js",
+    "!**/node_modules/**",
+    "!**/__tests__/**",
+    "!**/coverage/**"
+  ]
+}
