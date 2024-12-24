@@ -1,2 +1,4 @@
 e2e/node_modules
 unit/node_modules
+coverage
+.vscode

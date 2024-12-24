@@ -1,30 +1,34 @@
 const functions = {
-    isLeapYear: (year) => {
-        if (year % 4 == 0 && year % 100 != 0) {
-            return true;
-        }
-        return false;
-    },
-
-    sortArray: (arr) => {
-
-    },
-
-    joinTwoArray: (arr1, arr2) => {
-        return arr1.concat(arr2);
-    },
-
-    sendMessage: (phoneNo, message) => {
-        if (!phoneNo || !message) {
-            throw new Error("Параметр дутуу байна");
-        }
-
-        const phoneNoRegex = /^[6-9]{1}[0-9]{7}$/;
-        if (!phoneNoRegex.test(phoneNo)) {
-            throw new Error("Утасны дугаар буруу байна");
-        }
-        return true;
+  // Check if a year is a leap year
+  isLeapYear: (year) => {
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+      return true;
     }
-}
+    return false;
+  },
+
+  // Join two arrays
+  joinTwoArray: (arr1, arr2) => {
+    return arr1.concat(arr2);
+  },
+
+  // Simulate sending a message
+  sendMessage: (phoneNo) => {
+    throw new Error("Утасны дугаар буруу байна");
+  },
+
+  // Sum all numbers in an array
+  sumArray: (arr) => {
+    return arr.reduce((sum, num) => sum + num, 0);
+  },
+
+  // Find the maximum number in an array
+  findMax: (arr) => {
+    if (arr.length === 0) {
+      throw new Error("Array is empty");
+    }
+    return Math.max(...arr);
+  },
+};
 
 module.exports = functions;
